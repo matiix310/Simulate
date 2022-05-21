@@ -1,0 +1,125 @@
+#menu::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: -70px;
+    height: 100%;
+    width: 30vw;
+    background: #fff;
+    transform: skewX(10deg) translateX(-100%);
+
+    z-index: 18;
+    transition: all .3s ease-in-out;
+}
+
+#menu::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all .3s;
+    pointer-events: none;
+
+    z-index: 11;
+}
+
+#menu.active::after {
+    backdrop-filter: blur(10px);
+    pointer-events: initial;
+}
+
+#menu .menuContainer {
+    color: #073B4C;
+    width: auto;
+    height: 100%;
+    position: fixed;
+    margin-left: 50px;
+    font-size: 20px;
+    z-index: 19;
+    display: none;
+    padding-right: 100px;
+
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+#menu.active .menuContainer {
+    display: flex;
+}
+
+#menu .menuContainer h1 {
+    margin-right: 50px;
+    transition: all .3s ease-in-out;
+    transform: translateX(-200%);
+}
+
+#menu .menuContainer .decalage-menu {
+    /* background-color: green; */
+    height: 20%;
+}
+
+#footer {
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+    margin: 10px 10px;
+    font-size: 20px;
+    color: #073B4C;
+    z-index: 19;
+    transition: all .3s ease-in-out;
+    transform: translateX(-200%);
+}
+
+#menu.active .footer {
+    transform: translateX(0);
+}
+
+#menu.active::before {
+    transform: skewX(10deg) translateX(0);
+}
+
+#menu.active .menuContainer h1:nth-child(1) {
+    animation: slideRight .3s .3s forwards ease-out;
+}
+
+#menu.active .menuContainer h1:nth-child(2) {
+    animation: slideRight .3s .4s forwards ease-out;
+}
+
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-100%);
+    } to {
+        transform: translateX(0);
+    }
+}
+
+#menu .menuContainer h1 {
+    margin: 15px;
+}
+
+#menu .menuContainer h1:hover {
+    cursor: pointer;
+}
+
+#menu .menuContainer h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background: #118AB2;
+    width: 0;
+    height: 3px;
+    border-radius: 5px;
+
+    transition: all .3s ease-in-out;
+}
+
+#menu .menuContainer h1:hover::after {
+    width: 100%;
+}

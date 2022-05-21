@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation+</title>
+    <script src="https://kit.fontawesome.com/3aceb2ae95.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/hamburger.css">
+    <link rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" href="styles/graphs.css">
+</head>
+<body>
+    <h1 id="title">NOTES</h1>
+
+    <a class="hamburgler">
+        <div class="bun top"></div>
+        <div class="meat"></div>
+        <div class="bun bottom"></div>
+    </a>
+
+    <div id="menu" class="menu">
+        <div class="menuContainer">
+            <h1 id="share">Partager</h1>
+            <h1 id="import">Importer</h1>
+            <span class="decalage-menu"></span>
+        </div>
+        <h1 id="footer" class="footer">Matiix310&copy; 2021-2022</h1>
+    </div>
+
+    <div id="interfaceSelector">
+        <ul>
+            <li class="selected">Tableau</li>
+            <li>Graphiques</li>
+        </ul>
+        <span class="selector"></span>
+    </div>
+
+    <div id="table">
+        <div id="tableContent">
+        </div>
+
+        <h1 class="vertical-bar"></h1>
+        <div class="collapse"></div>
+    </div>
+
+    <div class="moyenneGContainer">
+        <div class="moyenneGNote">
+            <i class="fas fa-sort-up up"></i><i class="fas fa-sort-down down"></i>
+            <h1 id="moyenneG" start="">00</h1>
+            <h1 id="delta" class='delta'></h1>
+        </div>
+        <div class="moyenneGLabel">
+            <h1>MOYENNE GENERALE</h1>
+        </div>
+    </div>
+
+    <div id="graphs">
+        <div class="graphContainer">
+            <div class="gradeChart mainChartContainer">
+                <h1>Matière name</h1>
+                <div class="chartContainer">
+                    <canvas id="gradeChart" class="chart"></canvas>
+                </div>
+            </div>
+            <div class="coefsChart mainChartContainer">
+                <h1>Coeficients par matière</h1>
+                <div class="chartContainer">
+                    <canvas id="coefsChart" class="chart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contextMenu">
+        <ul>
+            <li class='menuList infoMenu'>
+                <i class="fas fa-info-circle"></i>
+                <h1>Coef : <span>0.00</span></h1>
+            </li>
+            <li class='menuList editMenu'>
+                <i class="fas fa-marker"></i>
+                <h1>Modifier</h1>
+            </li>
+            <li class='menuList deleteMenu'>
+                <i class="fas fa-trash"></i>
+                <h1>Supprimer</h1>
+            </li>
+            <li class='menuList addNoteMenu'>
+                <i class="fas fa-notes-medical"></i>
+                <h1>Ajouter une note</h1>
+            </li>
+        </ul>
+        <div class="addNoteContainer">
+            <input type="text" id="addNoteValue" placeholder="14,5/20">
+            <input type="text" id="addNoteCoef" placeholder="coef">
+            <i id="addNoteValidate" class="fas fa-check"></i>
+        </div>
+    </div>
+
+    <div id="notif" class="">
+        <h1 class="content">notif</h1>
+        <div class="progress"></div>
+    </div>
+
+</body>
+<script src="jquery/jquery-3.6.0.min.js"></script>
+<script src="scripts/index.js"></script>
+<script src="scripts/chart.js"></script>
+</html>

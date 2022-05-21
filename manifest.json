@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Simulate",
+    "version": "1.0",
+    "description": "Une simulation complète de tes notes Ecole Directe.",
+    "icons": {
+        "16": "16x16.png",
+        "48": "48x48.png",
+        "128": "128x128.png"
+    },
+    "browser_action": {
+        "default_title": "Simmulate+",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "content_security_policy": "script-src 'self' https://kit.fontawesome.com https://cdn.jsdelivr.net 'unsafe-eval'; object-src 'self'"
+}
